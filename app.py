@@ -3,7 +3,7 @@ from metadata.text_extractor import extract_text
 from metadata.llm_generator import generate_metadata
 import os
 import dotenv
-
+# New creation
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.config['OPENROUTER_API_KEY'] = os.getenv('OPENROUTER_API_KEY', 'your_api_key_here')
@@ -30,3 +30,4 @@ def upload_file():
 if __name__ == '__main__':
     print(f"Starting server with API key: {app.config['OPENROUTER_API_KEY']}")
     app.run(debug=True)
+
